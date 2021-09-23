@@ -18,7 +18,7 @@ public class Person{
 
     public void setAge(int age) {
         this.age = age;
-        if(age < 120 && age > 0)
+        if(age < MAX_AGE && age > 0)
             ageValid = true;
         else
             ageValid = false;
@@ -26,7 +26,7 @@ public class Person{
 
     public void setHeight(double height) {
         this.height = height;
-        if(height < 3.2 && height > 0)
+        if(height < MAX_HEIGHT && height > 0)
             heightValid = true;
         else
             heightValid = false;
