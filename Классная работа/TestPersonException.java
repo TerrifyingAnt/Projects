@@ -1,5 +1,5 @@
 public class TestPersonException {
-    private static void main(String [] args){
+    public static void main(String [] args){
         PersonException person = new PersonException();
         try {
             person.setName("D-431");

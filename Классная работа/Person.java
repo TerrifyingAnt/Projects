@@ -10,17 +10,26 @@ public class Person{
 
     public void setName(String name) {
         this.name = name;
-        nameValid = true;
+        if(name == "")
+            nameValid = false;
+        else
+            nameValid = true;
     }
 
     public void setAge(int age) {
         this.age = age;
-        ageValid = true;
+        if(age < MAX_AGE && age > 0)
+            ageValid = true;
+        else
+            ageValid = false;
     }
 
     public void setHeight(double height) {
         this.height = height;
-        heightValid = true;
+        if(height < MAX_HEIGHT && height > 0)
+            heightValid = true;
+        else
+            heightValid = false;
     }
 
     public String getName() {
