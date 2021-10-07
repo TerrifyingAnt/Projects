@@ -21,5 +21,8 @@ public class Main {
         str2 = str2.trim().trim().trim().trim().trim().trim().trim().trim();
         System.out.println(str2.empty());
 
+        System.out.println(str2.compareTo(str1));
+        System.out.println(str1.substring(1, 3));
+        System.out.println(str2.length());
     }
 }

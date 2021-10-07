@@ -7,6 +7,24 @@ public class MyString {
         mystring = str.toCharArray();
     }
 
+    MyString(MyString mstr)
+    {
+        mystring = mstr.mystring;
+    }
+
+    MyString(char[] mstr)
+    {
+        mystring = new char[mstr.length];
+        for(int i = 0; i < mstr.length; i++)
+            mystring[i] = mstr[i];
+    }
+
+    MyString()
+    {
+        mystring = new char[1];
+        mystring[0] = ' ';
+    }
+
     public MyString concat(MyString str)
     {
         char[] new_string = new char[mystring.length + str.mystring.length];
@@ -50,6 +68,38 @@ public class MyString {
             return true;
         else
             return false;
+    }
+
+    public int length()
+    {
+        return mystring.length;
+    }
+
+    public int compareTo(MyString str)
+    {
+        if (mystring.length == str.mystring.length)
+        {
+            for (int i = 0; i < mystring.length; i++)
+            {
+                if(mystring[i] > str.mystring[i]) return 1;
+                else
+                    if(mystring[i] < str.mystring[i]) return -1;
+                    else
+                        return 0;
+            }
+        }
+        else
+            if(mystring.length > str.mystring.length) return 1;
+        return -1;
+    }
+
+    public MyString substring(int startindex, int endindex)
+    {
+        char[] newstr = new char[endindex - startindex];
+        for(int i = 0; i + startindex < endindex; i++)
+            newstr[i] = mystring[i + startindex];
+        MyString new_str = new MyString(String.valueOf(newstr));
+        return new_str;
     }
 
     @Override
