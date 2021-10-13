@@ -1,6 +1,6 @@
-public class MyString {
+ public class MyString {
 
-    char[] mystring;
+     private final char[] mystring;
 
     MyString(String str)
     {
